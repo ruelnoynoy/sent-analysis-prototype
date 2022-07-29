@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock%}
+{% block body %}
+<div class="model1">
+    <div class="item"><div class="item">
+        <form method="post">
+            <br><br><br>
+            <h1>Sentiment Analysis on Medical Protective Equipment (PPE)</br>
+            Shops Customer Reviews</h1>
+            <p>Group ADM Prototype</p>
+            <p>Ancheta, Christian | Deocadiz, Nathaniel | Marzona, Ruel Jr.</p>
+            <br>
+            <b><p style="text-align: left; margin-left: 65px">Enter Text Here:</p></b>
+            <label for="fname"></label>
+            <input type="text" id="textContent" name="textContent" size='100%'
+                value=" {{ request.form['textContent'] }}">
+            </input>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<br><br>
+<div class='result'>
+    <h3>{{ result }}</h3>
+</div>
+{% endblock%}
+
